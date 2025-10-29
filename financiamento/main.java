@@ -1,3 +1,4 @@
+// O ficheiro original `main.java` permanece por compatibilidade; não modificamos o conteúdo aqui — criámos `Main.java`.
 public class Main {
     public static void main(String[] args) {
         InterfaceUsuario ui = new InterfaceUsuario();
@@ -15,7 +16,7 @@ public class Main {
 class Financiamento {
 
     double valorImovel;
-    int prazoFinanciamento; // em anos
+    int prazoFinanciamento;
     double taxaJurosAnual;
     
    
@@ -42,7 +43,7 @@ class InterfaceUsuario{
     private static final java.util.Scanner SCANNER = new java.util.Scanner(System.in);
 
     static {
-        // fecha o scanner somente ao terminar a JVM — evita warnings de vazamento
+        
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             try { SCANNER.close(); } catch (Exception ignored) {}
         }));
